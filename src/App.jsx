@@ -1,3 +1,4 @@
+import BinaryRain from './components/BinaryRain'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -9,6 +10,7 @@ import Footer from './components/Footer'
 function App() {
   return (
     <>
+      <BinaryRain />
       <div className="bg-grid" aria-hidden="true" />
       <Navbar />
       <Hero />
