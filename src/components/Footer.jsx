@@ -4,7 +4,7 @@ import './Footer.css'
 function Footer() {
   return (
     <footer className="footer container">
-      <div className="footer-logo gradient-text">ALEX</div>
+      <div className="footer-logo gradient-text">HAMISSI</div>
 
       <nav className="footer-links">
         <a href="#about">About</a>

@@ -5,7 +5,7 @@ function About() {
   return (
     <section id="about" className="section container">
       <div className="about-header">
-        <h2 className="about-name">Alex Rivera</h2>
+        <h2 className="about-name">Hamissi</h2>
         <p className="about-role">
           <span className="gradient-text">Full-Stack Developer</span> | Building Bold Digital Experiences
         </p>
@@ -22,7 +22,7 @@ function About() {
         <div>
           <div className="whoami-info">
             <dl>
-              <dt>user</dt><dd>alex</dd>
+              <dt>user</dt><dd>hamissi</dd>
               <dt>role</dt><dd>Full-Stack Developer</dd>
               <dt>focus</dt><dd>Web Applications</dd>
               <dt>education</dt><dd>B.Sc. Computer Science</dd>
