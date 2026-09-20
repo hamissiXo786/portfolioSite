@@ -6,8 +6,14 @@
 .hero-grid {
   display: grid;
   grid-template-columns: 1.3fr 1fr;
+  grid-template-areas: "text orbit" "cue orbit";
   align-items: center;
-  gap: var(--space-xl);
+  column-gap: var(--space-xl);
+  row-gap: 0;
+}
+
+.hero-text {
+  grid-area: text;
 }
 
 .hero-code-line {
@@ -65,13 +71,20 @@
 }
 
 .hero-orbit {
+  grid-area: orbit;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.scroll-cue {
+  grid-area: cue;
 }
 
 @media (max-width: 900px) {
   .hero-grid {
     grid-template-columns: 1fr;
+    grid-template-areas: "text" "orbit" "cue";
     text-align: center;
   }
 
@@ -85,7 +98,6 @@
   }
 
   .hero-orbit {
-    order: -1;
-    margin-bottom: var(--space-md);
+    margin-top: var(--space-lg);
   }
 }

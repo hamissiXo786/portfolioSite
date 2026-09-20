@@ -31,13 +31,13 @@ function Hero() {
             <a href="#about" className="btn btn-primary">View Profile</a>
             <a href="#projects" className="btn btn-outline">See Projects</a>
           </div>
-
-          <ScrollCue />
         </div>
 
         <div className="hero-orbit">
           <OrbitButton />
         </div>
+
+        <ScrollCue />
       </div>
     </section>
   )
