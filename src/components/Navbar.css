@@ -52,14 +52,22 @@
 
 .tag-num {
   color: var(--text-dim);
+  text-shadow: 0 0 6px rgba(160, 32, 240, 0.45);
 }
 
 .tag-code {
   color: var(--text);
+  text-shadow: 0 0 6px rgba(46, 107, 255, 0.3);
+}
+
+.nav-tag:hover .tag-num,
+.nav-tag.active .tag-num {
+  text-shadow: 0 0 8px rgba(255, 46, 230, 0.6);
 }
 
 .nav-tag:hover .tag-code {
   color: var(--neon-pink);
+  text-shadow: 0 0 8px rgba(255, 46, 230, 0.6);
 }
 
 .nav-tag.active {
@@ -69,6 +77,7 @@
 
 .nav-tag.active .tag-code {
   color: var(--neon-pink);
+  text-shadow: 0 0 8px rgba(255, 46, 230, 0.6);
 }
 
 .navbar-toggle {

@@ -21,6 +21,14 @@
   color: var(--text-dim);
 }
 
+.hero-code-line .tag-num:first-child {
+  margin-right: var(--space-2xs);
+}
+
+.hero-code-line .tag-num:last-child {
+  margin-left: var(--space-2xs);
+}
+
 .hero-title {
   font-size: clamp(2.1rem, 6vw, 3.6rem);
   font-weight: 800;

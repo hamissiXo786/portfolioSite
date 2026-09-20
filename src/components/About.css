@@ -54,7 +54,7 @@
   display: grid;
   grid-template-columns: auto 1fr;
   gap: var(--space-2xs) var(--space-sm);
-  margin: 0 0 var(--space-md);
+  margin: 0;
 }
 
 .whoami-info dt {
@@ -67,12 +67,12 @@
 }
 
 .about-bio {
-  margin-top: var(--space-sm);
   color: var(--text-dim);
   font-size: 0.9rem;
+  margin-bottom: var(--space-md);
 }
 
-.about-bio + .btn {
+.whoami-info + .btn {
   margin-top: var(--space-md);
 }
 

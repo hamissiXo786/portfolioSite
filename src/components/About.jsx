@@ -20,6 +20,13 @@ function About() {
         </div>
 
         <div>
+          <p className="about-bio">
+            I specialize in building fast, accessible, and visually striking web
+            applications from front to back. My toolkit spans modern JavaScript
+            frameworks, RESTful APIs, and cloud deployment — currently exploring
+            real-time collaboration tools.
+          </p>
+
           <div className="whoami-info">
             <dl>
               <dt>user</dt><dd>hamissi</dd>
@@ -29,13 +36,6 @@ function About() {
               <dt>location</dt><dd>Remote / Worldwide</dd>
             </dl>
           </div>
-
-          <p className="about-bio">
-            I specialize in building fast, accessible, and visually striking web
-            applications from front to back. My toolkit spans modern JavaScript
-            frameworks, RESTful APIs, and cloud deployment — currently exploring
-            real-time collaboration tools.
-          </p>
 
           <a href="#contact" className="btn btn-primary btn-sm">Download Resume</a>
         </div>
