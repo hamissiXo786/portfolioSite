@@ -149,6 +149,28 @@ img {
   transition: opacity 0.3s ease;
 }
 
+/* Folder-tab notch */
+.glow-border::after {
+  content: '';
+  position: absolute;
+  top: -13px;
+  left: var(--space-sm);
+  width: 56px;
+  height: 15px;
+  background: var(--surface-solid);
+  border: 1px solid rgba(160, 32, 240, 0.4);
+  border-bottom: none;
+  border-radius: 6px 6px 0 0;
+  box-shadow: 0 -2px 10px rgba(160, 32, 240, 0.2);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  pointer-events: none;
+}
+
+.glow-border:hover::after {
+  border-color: var(--neon-pink);
+  box-shadow: 0 -2px 14px rgba(255, 46, 230, 0.4);
+}
+
 .glow-border:hover::before {
   opacity: 1;
 }

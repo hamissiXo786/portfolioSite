@@ -1,16 +1,15 @@
 .scroll-cue {
   position: relative;
   display: block;
-  width: 200px;
-  height: 100px;
-  margin-top: 48px;
+  width: 40px;
+  height: 40px;
+  margin-top: var(--space-xl);
 }
 
 .scroll-cue-svg {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  top: 0;
+  left: 0;
   overflow: visible;
 }
 
@@ -51,8 +50,6 @@
 
 .scroll-cue-icon {
   position: absolute;
-  left: 158px;
-  top: 68px;
   font-family: var(--font-mono);
   font-weight: 700;
   font-size: 1rem;

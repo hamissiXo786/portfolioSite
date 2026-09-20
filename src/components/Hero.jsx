@@ -13,9 +13,7 @@ function Hero() {
 
           <h1 className="hero-title gradient-text">
             <span className="tag-num">&lt;h1&gt;</span>
-            <br />
-            Hamissi
-            <br />
+            <span className="hero-name">Hamissi</span>
             <span className="tag-num">&lt;/h1&gt;</span>
           </h1>
 
