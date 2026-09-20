@@ -30,8 +30,8 @@ function ScrollCue() {
       const containerRect = container.getBoundingClientRect()
       const targetRect = target.getBoundingClientRect()
 
-      const endX = targetRect.left - containerRect.left - 14
-      const endY = Math.max(60, targetRect.top - containerRect.top + targetRect.height / 2)
+      const endX = targetRect.left - containerRect.left
+      const endY = Math.max(60, targetRect.top - containerRect.top - 26)
 
       setGeo({
         width: Math.max(60, Math.abs(endX)) + 40,
