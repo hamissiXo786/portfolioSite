@@ -8,12 +8,12 @@ function OrbitButton() {
     <a href="#contact" className="orbit-button" aria-label="Download CV">
       <span className="orbit-ring orbit-ring-outer">
         {OUTER_DOTS.map((deg) => (
-          <span key={deg} className="orbit-dot" style={{ transform: `rotate(${deg}deg) translateX(90px)` }} />
+          <span key={deg} className="orbit-dot" style={{ '--deg': `${deg}deg` }} />
         ))}
       </span>
       <span className="orbit-ring orbit-ring-inner">
         {INNER_DOTS.map((deg) => (
-          <span key={deg} className="orbit-dot" style={{ transform: `rotate(${deg}deg) translateX(64px)` }} />
+          <span key={deg} className="orbit-dot" style={{ '--deg': `${deg}deg` }} />
         ))}
       </span>
       <span className="orbit-center">

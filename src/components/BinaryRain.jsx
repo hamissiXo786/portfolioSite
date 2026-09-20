@@ -23,7 +23,7 @@ function BinaryRain() {
       canvas.height = height
       const count = Math.ceil(width / FONT_SIZE)
       columns = Array.from({ length: count }, () => ({
-        y: Math.random() * -height,
+        y: Math.random() * height,
         speed: 2 + Math.random() * 3,
         color: COLORS[Math.floor(Math.random() * COLORS.length)],
       }))

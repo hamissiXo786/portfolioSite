@@ -1,7 +1,7 @@
 .orbit-button {
   position: relative;
-  width: 220px;
-  height: 220px;
+  width: 200px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,12 +17,12 @@
 }
 
 .orbit-ring-outer {
-  inset: 20px;
+  inset: 18px;
   animation: spin-cw 4s linear infinite;
 }
 
 .orbit-ring-inner {
-  inset: 46px;
+  inset: 42px;
   animation: spin-ccw 3s linear infinite;
 }
 
@@ -40,24 +40,32 @@
   margin: -3.5px 0 0 -3.5px;
   border-radius: 50%;
   background: #fff;
-  transform-origin: 0 0;
+  transform: rotate(var(--deg)) translateX(var(--dot-r));
+}
+
+.orbit-ring-outer .orbit-dot {
+  --dot-r: 82px;
+}
+
+.orbit-ring-inner .orbit-dot {
+  --dot-r: 58px;
 }
 
 .orbit-center {
   position: relative;
   z-index: 1;
-  width: 116px;
-  height: 116px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 8px;
+  padding: var(--space-2xs);
   background: var(--surface);
   border: 1px solid var(--border);
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 600;
   color: var(--text);
   transition: box-shadow 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.15s ease;
@@ -102,8 +110,8 @@
 
 @media (max-width: 900px) {
   .orbit-button {
-    width: 180px;
-    height: 180px;
+    width: 160px;
+    height: 160px;
   }
 
   .orbit-ring-outer {
@@ -114,9 +122,17 @@
     inset: 36px;
   }
 
+  .orbit-ring-outer .orbit-dot {
+    --dot-r: 66px;
+  }
+
+  .orbit-ring-inner .orbit-dot {
+    --dot-r: 44px;
+  }
+
   .orbit-center {
-    width: 96px;
-    height: 96px;
-    font-size: 0.64rem;
+    width: 72px;
+    height: 72px;
+    font-size: 0.56rem;
   }
 }

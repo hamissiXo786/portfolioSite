@@ -1,19 +1,19 @@
 .footer {
   border-top: 1px solid var(--border);
-  padding: 40px 0 24px;
+  padding: var(--space-lg) 0 var(--space-md);
   text-align: center;
 }
 
 .footer-logo {
   font-size: 1.2rem;
-  margin-bottom: 20px;
+  margin-bottom: var(--space-md);
 }
 
 .footer-links {
   display: flex;
   justify-content: center;
-  gap: 28px;
-  margin-bottom: 24px;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
   flex-wrap: wrap;
 }
 
@@ -30,8 +30,8 @@
 .footer-socials {
   display: flex;
   justify-content: center;
-  gap: 16px;
-  margin-bottom: 20px;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
 }
 
 .footer-socials a {

@@ -1,5 +1,5 @@
 .hero {
-  padding: 90px 0 70px;
+  padding-block: clamp(var(--space-2xl), 8vw, var(--space-3xl)) clamp(var(--space-xl), 6vw, var(--space-2xl));
   position: relative;
 }
 
@@ -7,42 +7,46 @@
   display: grid;
   grid-template-columns: 1.3fr 1fr;
   align-items: center;
-  gap: 40px;
+  gap: var(--space-xl);
 }
 
 .hero-code-line {
   font-family: var(--font-mono);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: var(--text);
-  margin-bottom: 4px;
+  margin-bottom: var(--space-2xs);
+}
+
+.hero-code-line .tag-num {
+  color: var(--text-dim);
 }
 
 .hero-title {
-  font-size: clamp(2.4rem, 7vw, 4.4rem);
+  font-size: clamp(2.1rem, 6vw, 3.6rem);
   font-weight: 800;
-  line-height: 1.05;
-  margin: 6px 0;
+  line-height: 1.1;
+  margin-block: var(--space-2xs);
   text-shadow: 0 0 40px rgba(160, 32, 240, 0.3);
 }
 
 .hero-title .tag-num {
   display: block;
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 400;
   color: var(--text-dim);
 }
 
 .hero-tagline {
-  margin-top: 24px;
+  margin-top: var(--space-md);
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: var(--space-xs);
 }
 
 .hero-actions {
-  margin-top: 36px;
+  margin-top: var(--space-lg);
   display: flex;
-  gap: 20px;
+  gap: var(--space-md);
   flex-wrap: wrap;
 }
 
@@ -68,5 +72,6 @@
 
   .hero-orbit {
     order: -1;
+    margin-bottom: var(--space-md);
   }
 }

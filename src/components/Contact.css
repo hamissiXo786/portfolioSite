@@ -5,7 +5,7 @@
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: var(--space-md);
 }
 
 .form-group label {
@@ -19,7 +19,7 @@
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 12px 14px;
+  padding: var(--space-xs) var(--space-sm);
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border);
   border-radius: 6px;
@@ -44,7 +44,7 @@
 .form-consent {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
+  gap: var(--space-xs);
   font-size: 0.8rem;
   color: var(--text-dim);
   margin-bottom: 24px;

@@ -1,13 +1,13 @@
 .skills-group {
-  margin-bottom: 40px;
+  margin-bottom: var(--space-xl);
 }
 
 .skills-group-title {
   font-size: 1.1rem;
-  margin-bottom: 20px;
+  margin-bottom: var(--space-md);
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: var(--space-xs);
 }
 
 .skills-group-title::before {
