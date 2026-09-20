@@ -2,14 +2,10 @@ import { useEffect, useRef, useState } from 'react'
 import './ScrollCue.css'
 
 const START = { x: 10, y: 4 }
-const ELBOW = 20
-const DEFAULT_GEO = { width: 200, height: 100, path: 'M10 4 V64 Q10 84 30 84 H168', endX: 168, endY: 84 }
+const DEFAULT_GEO = { width: 200, height: 100, path: 'M10 4 L168 84', endX: 168, endY: 84 }
 
 function buildPath(endX, endY) {
-  const midY = Math.max(START.y + 8, endY - ELBOW)
-  const dir = endX >= START.x ? 1 : -1
-  const cornerX = START.x + dir * ELBOW
-  return `M${START.x} ${START.y} V${midY} Q${START.x} ${midY + ELBOW} ${cornerX} ${midY + ELBOW} H${endX - dir * 8}`
+  return `M${START.x} ${START.y} L${endX} ${endY}`
 }
 
 function handleClick(e) {
