@@ -6,7 +6,7 @@
 .hero-grid {
   display: grid;
   grid-template-columns: 1.3fr 1fr;
-  grid-template-areas: "text orbit" "cue orbit";
+  grid-template-areas: "text orbit" "cue .";
   align-items: center;
   column-gap: var(--space-xl);
   row-gap: 0;
