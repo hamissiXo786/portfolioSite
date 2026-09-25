@@ -1,0 +1,21 @@
+.education-card {
+  padding: var(--space-md);
+}
+
+.education-date {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--neon-pink);
+  margin-bottom: var(--space-xs);
+}
+
+.education-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: var(--space-2xs);
+}
+
+.education-card p {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}

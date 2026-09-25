@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { FaGithub, FaGlobe } from 'react-icons/fa'
 import './Footer.css'
 
 function Footer() {
@@ -14,9 +14,8 @@ function Footer() {
       </nav>
 
       <div className="footer-socials">
-        <a href="#" aria-label="GitHub"><FaGithub /></a>
-        <a href="#" aria-label="LinkedIn"><FaLinkedin /></a>
-        <a href="#" aria-label="Twitter"><FaTwitter /></a>
+        <a href="https://github.com/hamissiXo786" target="_blank" rel="noreferrer" aria-label="GitHub"><FaGithub /></a>
+        <a href="https://hamissi.co.za" target="_blank" rel="noreferrer" aria-label="Website"><FaGlobe /></a>
       </div>
 
       <p className="footer-copy">Copyright © {new Date().getFullYear()}. All Rights Reserved.</p>

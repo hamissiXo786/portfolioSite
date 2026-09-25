@@ -1,44 +1,21 @@
 export const projects = [
   {
-    title: 'Dynamic Web Portfolio',
-    description: 'A vibrant and interactive personal portfolio showcasing my work and skills.',
-    tech: 'React.js, HTML, Tailwind CSS',
-    codeUrl: '#',
-    demoUrl: '#',
+    title: 'Africa School of Technology Registration Portal',
+    description: 'A registration and admissions platform where applicants sign up, submit application forms, and receive email confirmation, while admins review submissions, update application statuses, and send acceptance letters.',
+    url: 'https://astportal.co.za',
   },
   {
-    title: 'Real Estate Marketplace',
-    description: 'An online platform for buying, selling, and renting properties with an intuitive UI.',
-    tech: 'React.js, Node.js, MongoDB',
-    codeUrl: '#',
-    demoUrl: '#',
+    title: 'MyDoc Customer Management System',
+    description: 'A patient management system for healthcare admins to register, add patient profiles, record consultations, and print visit histories to support doctor assessments.',
+    url: 'https://repstar.xyz',
   },
-  {
-    title: 'E-commerce Store',
-    description: 'A full-featured e-commerce store with product listings, shopping cart, and payment integration.',
-    tech: 'Vue.js, Vuex, Firebase',
-    codeUrl: '#',
-    demoUrl: '#',
-  },
-  {
-    title: 'Interactive Dashboard',
-    description: 'A dashboard application for data visualization and analytics with dynamic charts and graphs.',
-    tech: 'Angular, TypeScript, D3.js',
-    codeUrl: '#',
-    demoUrl: '#',
-  },
-  {
-    title: 'Mobile Fitness App',
-    description: 'A fitness tracking app with features for workout planning, goal tracking, and social sharing.',
-    tech: 'React Native, Redux, Expo Go',
-    codeUrl: '#',
-    demoUrl: '#',
-  },
-  {
-    title: 'Recipe Finder',
-    description: 'A web application to search for recipes, save favorites, and create shopping lists.',
-    tech: 'Python, Flask, SQLAlchemy',
-    codeUrl: '#',
-    demoUrl: '#',
-  },
+]
+
+export const moreProjects = [
+  { label: 'University Portal (GitHub)', url: 'https://github.com/hamissiXo786/university.github.io' },
+  { label: 'AS Technology', url: 'https://astechnology.co.za' },
+  { label: 'Jolofina App (GitHub)', url: 'https://github.com/hamissiXo786/Jolofina-App' },
+  { label: 'GRGS', url: 'https://grgs.co.za' },
+  { label: 'Personal Site', url: 'https://hamissi.co.za' },
+  { label: 'y2mp33 (GitHub)', url: 'https://github.com/hamissiXo786/y2mp33' },
 ]

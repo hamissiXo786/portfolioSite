@@ -1,4 +1,4 @@
-import { services, certifications, programmingLanguages, devTools } from '../data/skills'
+import { services, languages, frameworks, tools } from '../data/skills'
 import './About.css'
 
 function About() {
@@ -7,7 +7,7 @@ function About() {
       <div className="about-header">
         <h2 className="about-name"><span id="about-heading-text">Hamissi</span></h2>
         <p className="about-role">
-          <span className="gradient-text">Full-Stack Developer</span> | Building Bold Digital Experiences
+          <span className="gradient-text">Software Developer</span> | Lecturer &amp; Networking Enthusiast
         </p>
       </div>
 
@@ -21,23 +21,25 @@ function About() {
 
         <div>
           <p className="about-bio">
-            I specialize in building fast, accessible, and visually striking web
-            applications from front to back. My toolkit spans modern JavaScript
-            frameworks, RESTful APIs, and cloud deployment — currently exploring
-            real-time collaboration tools.
+            I'm Muhammad Hamissi, a software developer with a problem-solving
+            focus on building applications that matter — using enterprise-level
+            languages and frameworks to deliver solutions with a customer-first
+            approach. Alongside development, I lecture in Robotics, Python,
+            Flutter, and Networking, which is where a lot of my curiosity for
+            the network side of the stack comes from.
           </p>
 
           <div className="whoami-info">
             <dl>
               <dt>user</dt><dd>hamissi</dd>
-              <dt>role</dt><dd>Full-Stack Developer</dd>
-              <dt>focus</dt><dd>Web Applications</dd>
-              <dt>education</dt><dd>B.Sc. Computer Science</dd>
-              <dt>location</dt><dd>Remote / Worldwide</dd>
+              <dt>role</dt><dd>Software Developer</dd>
+              <dt>focus</dt><dd>Enterprise Application Development</dd>
+              <dt>education</dt><dd>National Diploma: ICT</dd>
+              <dt>location</dt><dd>South Africa</dd>
             </dl>
           </div>
 
-          <a href="#contact" className="btn btn-primary btn-sm">Download Resume</a>
+          <a href="Muhammad-Hamissi-CV.pdf" download className="btn btn-primary btn-sm">Download Resume</a>
         </div>
 
         <div className="whoami-badges">
@@ -49,23 +51,23 @@ function About() {
           </div>
 
           <div>
-            <h4>Certifications</h4>
+            <h4>Languages</h4>
             <div className="badge-row">
-              {certifications.map((c) => <span key={c} className="badge">{c}</span>)}
+              {languages.map((l) => <span key={l.name} className="badge">{l.name}</span>)}
             </div>
           </div>
 
           <div>
-            <h4>Programming Languages</h4>
+            <h4>Frameworks</h4>
             <div className="badge-row">
-              {programmingLanguages.map((l) => <span key={l.name} className="badge">{l.name}</span>)}
+              {frameworks.map((f) => <span key={f.name} className="badge">{f.name}</span>)}
             </div>
           </div>
 
           <div>
-            <h4>Developer Tools</h4>
+            <h4>Tools</h4>
             <div className="badge-row">
-              {devTools.map((t) => <span key={t} className="badge">{t}</span>)}
+              {tools.map((t) => <span key={t.name} className="badge">{t.name}</span>)}
             </div>
           </div>
         </div>

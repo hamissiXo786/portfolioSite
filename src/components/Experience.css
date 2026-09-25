@@ -1,0 +1,62 @@
+.experience-card {
+  padding: var(--space-md);
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.experience-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--border);
+}
+
+.experience-header h3 {
+  font-size: 1.2rem;
+}
+
+.experience-date {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--neon-pink);
+}
+
+.experience-block {
+  margin-bottom: var(--space-md);
+}
+
+.experience-block:last-child {
+  margin-bottom: 0;
+}
+
+.experience-block h4 {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--space-xs);
+}
+
+.experience-block ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}
+
+.experience-block li {
+  position: relative;
+  padding-left: var(--space-sm);
+  font-size: 0.9rem;
+  color: var(--text-dim);
+}
+
+.experience-block li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: var(--neon-purple);
+}

@@ -1,4 +1,4 @@
-import { securityTools, programmingLanguages, webTech } from '../data/skills'
+import { languages, frameworks, tools } from '../data/skills'
 import './Skills.css'
 
 function SkillGrid({ title, items }) {
@@ -23,12 +23,12 @@ function Skills() {
     <section id="skills" className="section container">
       <h2 className="section-heading gradient-text">My Core Skills</h2>
       <p className="section-subheading">
-        Tools and technologies I use to build and secure digital products
+        Languages, frameworks, and tools I use to build and teach with
       </p>
 
-      <SkillGrid title="Security Tools" items={securityTools} />
-      <SkillGrid title="Programming Languages" items={programmingLanguages} />
-      <SkillGrid title="Web Tech" items={webTech} />
+      <SkillGrid title="Languages" items={languages} />
+      <SkillGrid title="Frameworks" items={frameworks} />
+      <SkillGrid title="Tools" items={tools} />
     </section>
   )
 }

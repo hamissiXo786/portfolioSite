@@ -18,13 +18,13 @@ function Hero() {
           </h1>
 
           <p className="hero-code-line">
-            <span className="tag-num">&lt;p&gt;</span>Full-Stack Developer &amp; Security Enthusiast<span className="tag-num">&lt;/p&gt;</span>
+            <span className="tag-num">&lt;p&gt;</span>Software Developer &amp; Networking Enthusiast<span className="tag-num">&lt;/p&gt;</span>
           </p>
 
           <div className="hero-tagline">
-            <span className="badge badge-glow">FULL-STACK DEVELOPER</span>
-            <span className="badge badge-glow">UI/UX ENTHUSIAST</span>
-            <span className="badge badge-glow">OPEN SOURCE CONTRIBUTOR</span>
+            <span className="badge badge-glow">SOFTWARE DEVELOPER</span>
+            <span className="badge badge-glow">NETWORKING ENTHUSIAST</span>
+            <span className="badge badge-glow">LECTURER</span>
           </div>
 
           <div className="hero-actions">

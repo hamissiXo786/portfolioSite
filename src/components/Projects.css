@@ -1,5 +1,5 @@
 .project-card {
-  padding: 24px;
+  padding: var(--space-md);
   display: flex;
   flex-direction: column;
   transition: transform 0.25s ease;
@@ -16,22 +16,15 @@
 
 .project-desc {
   color: var(--text-dim);
-  font-size: 0.85rem;
-  margin-bottom: 12px;
+  font-size: 0.9rem;
+  margin-bottom: var(--space-sm);
   flex-grow: 1;
-}
-
-.project-tech {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  color: var(--neon-blue);
-  margin-bottom: 16px;
 }
 
 .project-thumb {
   height: 140px;
   border-radius: 6px;
-  margin-bottom: 16px;
+  margin-bottom: var(--space-sm);
   background: var(--gradient-diag);
   opacity: 0.25;
   position: relative;
@@ -52,5 +45,34 @@
 
 .project-actions {
   display: flex;
-  gap: 12px;
+  gap: var(--space-xs);
+}
+
+.more-projects {
+  margin-top: var(--space-xl);
+  text-align: center;
+}
+
+.more-projects-title {
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--space-md);
+}
+
+.more-projects-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-xs);
+}
+
+.more-projects-link {
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.more-projects-link:hover {
+  color: var(--neon-pink);
+  border-color: var(--neon-purple);
 }
