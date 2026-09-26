@@ -79,6 +79,7 @@
 
 .scroll-cue {
   grid-area: cue;
+  margin-inline: auto;
 }
 
 @media (max-width: 900px) {
@@ -91,10 +92,6 @@
   .hero-tagline,
   .hero-actions {
     justify-content: center;
-  }
-
-  .scroll-cue {
-    margin-inline: auto;
   }
 
   .hero-orbit {
