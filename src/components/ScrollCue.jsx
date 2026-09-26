@@ -2,10 +2,10 @@ import { useEffect, useRef, useState } from 'react'
 import './ScrollCue.css'
 
 const START = { x: 10, y: 4 }
-const DEFAULT_GEO = { width: 200, height: 100, path: 'M10 4 L168 84', endX: 168, endY: 84 }
+const DEFAULT_GEO = { width: 40, height: 100, path: 'M10 4 L10 84', endY: 84 }
 
-function buildPath(endX, endY) {
-  return `M${START.x} ${START.y} L${endX} ${endY}`
+function buildPath(endY) {
+  return `M${START.x} ${START.y} L${START.x} ${endY}`
 }
 
 function handleClick(e) {
@@ -26,14 +26,12 @@ function ScrollCue() {
       const containerRect = container.getBoundingClientRect()
       const targetRect = target.getBoundingClientRect()
 
-      const endX = targetRect.left - containerRect.left
       const endY = Math.max(60, targetRect.top - containerRect.top - 26)
 
       setGeo({
-        width: Math.max(60, Math.abs(endX)) + 40,
+        width: 40,
         height: endY + 16,
-        path: buildPath(endX, endY),
-        endX,
+        path: buildPath(endY),
         endY,
       })
     }
@@ -63,7 +61,7 @@ function ScrollCue() {
       </svg>
       <span className="scroll-cue-node" />
       <span className="scroll-cue-pulse" style={{ offsetPath: `path('${geo.path}')` }} />
-      <span className="scroll-cue-icon" style={{ left: geo.endX - 10, top: geo.endY - 11 }}>&lt;/&gt;</span>
+      <span className="scroll-cue-icon" style={{ left: START.x - 10, top: geo.endY - 11 }}>&lt;/&gt;</span>
     </a>
   )
 }
