@@ -2,7 +2,8 @@ import { useEffect, useRef, useState } from 'react'
 import './ScrollCue.css'
 
 const START = { x: 10, y: 4 }
-const DEFAULT_GEO = { width: 40, height: 100, path: 'M10 4 L10 84', endY: 84 }
+const ICON_GAP = 20
+const DEFAULT_GEO = { width: 40, height: 100, path: 'M10 4 L10 64', endY: 84 }
 
 function buildPath(endY) {
   return `M${START.x} ${START.y} L${START.x} ${endY}`
@@ -31,7 +32,7 @@ function ScrollCue() {
       setGeo({
         width: 40,
         height: endY + 16,
-        path: buildPath(endY),
+        path: buildPath(endY - ICON_GAP),
         endY,
       })
     }
