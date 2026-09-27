@@ -97,4 +97,8 @@
   .hero-orbit {
     margin-top: var(--space-lg);
   }
+
+  .scroll-cue {
+    margin-top: var(--space-2xl);
+  }
 }
