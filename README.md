@@ -34,3 +34,7 @@ account's `public_html/` root or a subdirectory.
 - `src/data/skills.js` — security tools, programming languages, web tech, certifications, services, dev tools.
 - `src/data/projects.js` — project cards (title, description, tech stack, links).
 - `src/components/About.jsx` and `Hero.jsx` — name, role, and bio text.
+
+## Credits
+
+Skill logos come from [Devicon](https://devicon.dev) (MIT); the logos themselves remain trademarks of their respective owners.

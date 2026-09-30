@@ -7,9 +7,9 @@ function SkillGrid({ title, items }) {
     <div className="skills-group">
       <h3 className="skills-group-title">{title}</h3>
       <div className={`grid ${cols}`}>
-        {items.map(({ name, icon: Icon }) => (
+        {items.map(({ name, logo }) => (
           <div key={name} className="skill-tile glow-border">
-            <Icon className="skill-icon" />
+            <img src={logo} alt="" className="skill-logo" />
             <div className="skill-name">{name}</div>
           </div>
         ))}
