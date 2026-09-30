@@ -1,4 +1,4 @@
-import { services, languages, frameworks, tools } from '../data/skills'
+import { services, networking, languages, frameworks, tools } from '../data/skills'
 import './About.css'
 
 function About() {
@@ -7,7 +7,7 @@ function About() {
       <div className="about-header">
         <h2 className="about-name"><span id="about-heading-text">Hamissi</span></h2>
         <p className="about-role">
-          <span className="gradient-text">Software Developer</span> | Lecturer &amp; Networking Enthusiast
+          <span className="gradient-text">Network Administrator / Analyst (L1)</span> | Software Developer
         </p>
       </div>
 
@@ -21,19 +21,24 @@ function About() {
 
         <div>
           <p className="about-bio">
-            I'm Muhammad Hamissi, a software developer with a problem-solving
-            focus on building applications that matter — using enterprise-level
-            languages and frameworks to deliver solutions with a customer-first
-            approach. Alongside development, I lecture in Robotics, Python,
-            Flutter, and Networking, which is where a lot of my curiosity for
-            the network side of the stack comes from.
+            I'm Muhammad Hamissi, a Level 1 Network Administrator / Analyst at
+            Datavalet, a managed technology services provider that designs,
+            deploys, and monitors Wi-Fi and network environments for hotels,
+            retail, healthcare, residential, and education clients. For the past
+            two years I've helped manage a range of networks and troubleshoot end
+            devices, modems, switches, and firewalls, working day to day with
+            Cisco Meraki, Aruba AirWave, Ruckus, and HPE networking gear.
+            Alongside the network work I'm a software developer with a
+            problem-solving focus, using enterprise-level languages and
+            frameworks to deliver customer-first solutions, and I've lectured
+            Networking, Python, Flutter, and Robotics.
           </p>
 
           <div className="whoami-info">
             <dl>
               <dt>user</dt><dd>hamissi</dd>
-              <dt>role</dt><dd>Software Developer</dd>
-              <dt>focus</dt><dd>Enterprise Application Development</dd>
+              <dt>role</dt><dd>Network Administrator / Analyst (L1)</dd>
+              <dt>focus</dt><dd>Network Management &amp; Troubleshooting</dd>
               <dt>education</dt><dd>National Diploma: ICT</dd>
               <dt>location</dt><dd>South Africa</dd>
             </dl>
@@ -47,6 +52,13 @@ function About() {
             <h4>Services</h4>
             <div className="badge-row">
               {services.map((s) => <span key={s} className="badge">{s}</span>)}
+            </div>
+          </div>
+
+          <div>
+            <h4>Networking</h4>
+            <div className="badge-row">
+              {networking.map((n) => <span key={n.name} className="badge">{n.name}</span>)}
             </div>
           </div>
 

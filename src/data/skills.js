@@ -1,3 +1,7 @@
+import meraki from '../assets/skills/meraki.svg'
+import airwave from '../assets/skills/airwave.svg'
+import ruckus from '../assets/skills/ruckus.svg'
+import hpe from '../assets/skills/hpe.svg'
 import csharp from '../assets/skills/csharp.svg'
 import html5 from '../assets/skills/html5.svg'
 import css3 from '../assets/skills/css3.svg'
@@ -15,6 +19,13 @@ import mysql from '../assets/skills/mysql.svg'
 import photoshop from '../assets/skills/photoshop.svg'
 import git from '../assets/skills/git.svg'
 import visualstudio from '../assets/skills/visualstudio.svg'
+
+export const networking = [
+  { name: 'Cisco Meraki', logo: meraki },
+  { name: 'Aruba AirWave', logo: airwave },
+  { name: 'Ruckus', logo: ruckus },
+  { name: 'HPE Networking', logo: hpe },
+]
 
 export const languages = [
   { name: 'C#', logo: csharp },
@@ -42,4 +53,9 @@ export const tools = [
   { name: 'Visual Studio', logo: visualstudio },
 ]
 
-export const services = ['Web Development', 'Mobile App Development', 'Teaching & Training']
+export const services = [
+  'Network Administration & Monitoring',
+  'Troubleshooting & Support',
+  'Web Development',
+  'Mobile App Development',
+]
