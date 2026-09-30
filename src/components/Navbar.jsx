@@ -5,7 +5,6 @@ const links = [
   { id: 'about', href: '#about', label: 'About', num: '01' },
   { id: 'skills', href: '#skills', label: 'Skills', num: '02' },
   { id: 'projects', href: '#projects', label: 'Projects', num: '03' },
-  { id: 'contact', href: '#contact', label: 'Contact', num: '04' },
 ]
 
 function NavTag({ link, active, onClick }) {

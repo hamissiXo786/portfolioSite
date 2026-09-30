@@ -11,23 +11,6 @@ npm install
 npm run dev
 ```
 
-## Contact Form
-
-The contact form (`src/components/Contact.jsx`) submits to
-[Formspree](https://formspree.io):
-
-1. Create a free form at https://formspree.io and copy its form ID
-   (the part after `/f/` in the endpoint URL it gives you).
-2. Copy `.env.example` to `.env` and set:
-   ```
-   VITE_FORMSPREE_ID=your_form_id
-   ```
-3. Restart `npm run dev` after adding the env var.
-
-If `VITE_FORMSPREE_ID` is left unset, submitting the form instead opens
-a pre-filled `mailto:` link to the address in `src/data/config.js`
-(`CONTACT_EMAIL`) — update that with your real email.
-
 ## Building for Production
 
 ```bash
@@ -50,5 +33,4 @@ account's `public_html/` root or a subdirectory.
 
 - `src/data/skills.js` — security tools, programming languages, web tech, certifications, services, dev tools.
 - `src/data/projects.js` — project cards (title, description, tech stack, links).
-- `src/data/config.js` — fallback contact email.
 - `src/components/About.jsx` and `Hero.jsx` — name, role, and bio text.

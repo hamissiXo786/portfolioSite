@@ -5,7 +5,7 @@ const INNER_DOTS = [40, 160, 280]
 
 function OrbitButton() {
   return (
-    <a href="#contact" className="orbit-button" aria-label="Download CV">
+    <a href="Muhammad-Hamissi-CV.pdf" download className="orbit-button" aria-label="Download CV">
       <span className="orbit-ring orbit-ring-outer">
         {OUTER_DOTS.map((deg) => (
           <span key={deg} className="orbit-dot" style={{ '--deg': `${deg}deg` }} />
