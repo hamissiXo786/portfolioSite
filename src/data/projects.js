@@ -1,21 +1,21 @@
 export const projects = [
   {
-    title: 'Africa School of Technology Registration Portal',
-    description: 'A registration and admissions platform where applicants sign up, submit application forms, and receive email confirmation, while admins review submissions, update application statuses, and send acceptance letters.',
-    url: 'https://astportal.co.za',
+    title: "Gordon Road Girls' School Website",
+    description: "The website for Gordon Road Girls' School in Morningside, Durban, giving parents and prospective families pre-school and Grade 1–7 admissions information, academics, after-care, governing body details, FAQs, and contact information.",
+    url: 'https://grgs.co.za',
   },
   {
-    title: 'MyDoc Customer Management System',
-    description: 'A patient management system for healthcare admins to register, add patient profiles, record consultations, and print visit histories to support doctor assessments.',
-    url: 'https://repstar.xyz',
+    title: 'Africa School of Technology Website',
+    description: 'The main website for Africa School of Technology, a Durban computer-training college founded in 2017, presenting its hands-on IT courses, MICT SETA accreditation, and Cisco, CompTIA, and Microsoft certifications.',
+    url: 'https://astechnology.co.za',
   },
 ]
 
 export const moreProjects = [
+  { label: 'AST Registration Portal', url: 'https://astportal.co.za' },
+  { label: 'MyDoc CMS', url: 'https://repstar.xyz' },
   { label: 'University Portal (GitHub)', url: 'https://github.com/hamissiXo786/university.github.io' },
-  { label: 'AS Technology', url: 'https://astechnology.co.za' },
   { label: 'Jolofina App (GitHub)', url: 'https://github.com/hamissiXo786/Jolofina-App' },
-  { label: 'GRGS', url: 'https://grgs.co.za' },
   { label: 'Personal Site', url: 'https://hamissi.co.za' },
   { label: 'y2mp33 (GitHub)', url: 'https://github.com/hamissiXo786/y2mp33' },
 ]
