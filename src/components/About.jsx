@@ -21,13 +21,13 @@ function About() {
 
         <div>
           <p className="about-bio">
-            I'm Muhammad Hamissi, a Level 1 Network Administrator / Analyst at
-            Datavalet, a managed technology services provider that designs,
+            I'm Muhammad Hamissi, a <strong className="hl">Level 1 Network Administrator / Analyst</strong> at{' '}
+            <strong className="hl">Datavalet</strong>, a managed technology services provider that designs,
             deploys, and monitors Wi-Fi and network environments for hotels,
             retail, healthcare, residential, and education clients. For the past
             two years I've helped manage a range of networks and troubleshoot end
-            devices, modems, switches, and firewalls, working day to day with
-            Cisco Meraki, Aruba AirWave, Ruckus, and HPE networking gear.
+            devices, modems, switches, and firewalls, working day to day with{' '}
+            <strong className="hl">Cisco Meraki</strong>, <strong className="hl">Aruba AirWave</strong>, <strong className="hl">Ruckus</strong>, and <strong className="hl">HPE</strong> networking gear.
             Alongside the network work I'm a software developer with a
             problem-solving focus, using enterprise-level languages and
             frameworks to deliver customer-first solutions, and I've lectured

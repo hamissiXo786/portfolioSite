@@ -7,10 +7,15 @@ import Education from './components/Education'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Footer from './components/Footer'
+import ScrollProgress from './components/ScrollProgress'
+import useScrollReveal from './hooks/useScrollReveal'
 
 function App() {
+  useScrollReveal()
+
   return (
     <>
+      <ScrollProgress />
       <BinaryRain />
       <div className="bg-grid" aria-hidden="true" />
       <Navbar />
