@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TikTok Sticker Saver</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100svh;
+      background: #0d0d0d;
+      color: #f0f0f0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem 4rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    header h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #fe2c55, #ff6b81);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    header p {
+      color: #888;
+      margin-top: 0.4rem;
+      font-size: 0.9rem;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 520px;
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-radius: 16px;
+      padding: 1.75rem;
+    }
+
+    label {
+      display: block;
+      font-size: 0.85rem;
+      color: #aaa;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    .input-row {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    input[type="text"] {
+      flex: 1;
+      background: #111;
+      border: 1px solid #333;
+      border-radius: 10px;
+      color: #f0f0f0;
+      font-size: 0.9rem;
+      padding: 0.65rem 0.9rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    input[type="text"]:focus {
+      border-color: #fe2c55;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.65rem 1.2rem;
+      transition: opacity 0.15s, transform 0.1s;
+    }
+
+    button:active { transform: scale(0.97); }
+    button:disabled { opacity: 0.45; cursor: not-allowed; transform: none; }
+
+    .btn-paste {
+      background: #2a2a2a;
+      color: #ccc;
+      white-space: nowrap;
+    }
+
+    .btn-download {
+      width: 100%;
+      margin-top: 0.9rem;
+      background: linear-gradient(135deg, #fe2c55, #ff6b81);
+      color: #fff;
+      padding: 0.75rem;
+      font-size: 1rem;
+    }
+
+    /* Status */
+    .status {
+      margin-top: 1rem;
+      font-size: 0.875rem;
+      min-height: 1.2rem;
+      text-align: center;
+    }
+
+    .status.loading { color: #888; }
+    .status.error   { color: #ff6b81; }
+    .status.success { color: #4ade80; }
+
+    /* Spinner */
+    .spinner {
+      display: inline-block;
+      width: 14px; height: 14px;
+      border: 2px solid #555;
+      border-top-color: #fe2c55;
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* Preview */
+    .preview-wrap {
+      margin-top: 1.5rem;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .preview-wrap.visible { display: flex; }
+
+    .preview-wrap img {
+      max-width: 200px;
+      max-height: 200px;
+      border-radius: 12px;
+      border: 1px solid #333;
+      object-fit: contain;
+      background: #111;
+    }
+
+    .btn-save {
+      background: #25d366;
+      color: #fff;
+      padding: 0.7rem 2rem;
+      font-size: 0.95rem;
+    }
+
+    /* How-to steps */
+    .howto {
+      width: 100%;
+      max-width: 520px;
+      margin-top: 2rem;
+      background: #161616;
+      border: 1px solid #2a2a2a;
+      border-radius: 16px;
+      padding: 1.5rem 1.75rem;
+    }
+
+    .howto h2 {
+      font-size: 0.95rem;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 1rem;
+    }
+
+    .howto ol {
+      padding-left: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+
+    .howto li {
+      font-size: 0.875rem;
+      color: #bbb;
+      line-height: 1.5;
+    }
+
+    .howto li strong { color: #f0f0f0; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>TikTok Sticker Saver</h1>
+    <p>Paste a sticker URL and download it as a JPG for WhatsApp</p>
+  </header>
+
+  <div class="card">
+    <label for="url-input">Sticker URL</label>
+    <div class="input-row">
+      <input
+        id="url-input"
+        type="text"
+        placeholder="https://p16-sg.tiktokcdn.com/…"
+        autocomplete="off"
+        autocorrect="off"
+        spellcheck="false"
+      />
+      <button class="btn-paste" id="btn-paste" type="button">Paste</button>
+    </div>
+
+    <button class="btn-download" id="btn-download" type="button">
+      Download Sticker
+    </button>
+
+    <div class="status" id="status"></div>
+
+    <div class="preview-wrap" id="preview-wrap">
+      <img id="preview-img" src="" alt="Sticker preview" />
+      <a id="btn-save" class="btn-save" download="sticker.jpg">
+        Save JPG
+      </a>
+    </div>
+  </div>
+
+  <div class="howto">
+    <h2>How to add to WhatsApp</h2>
+    <ol>
+      <li>Save the JPG to your phone's camera roll / gallery.</li>
+      <li>Open <strong>WhatsApp</strong> and go to any chat.</li>
+      <li>Tap the <strong>attachment (📎)</strong> icon → <strong>Gallery</strong>.</li>
+      <li>Select the saved image, then tap the <strong>scissors ✂️ icon</strong> to convert it to a sticker.</li>
+      <li>Send it — it's now saved to your sticker keyboard.</li>
+    </ol>
+  </div>
+
+  <script>
+    const urlInput   = document.getElementById('url-input');
+    const btnPaste   = document.getElementById('btn-paste');
+    const btnDownload = document.getElementById('btn-download');
+    const statusEl   = document.getElementById('status');
+    const previewWrap = document.getElementById('preview-wrap');
+    const previewImg = document.getElementById('preview-img');
+    const btnSave    = document.getElementById('btn-save');
+
+    let currentObjectUrl = null;
+
+    btnPaste.addEventListener('click', async () => {
+      try {
+        const text = await navigator.clipboard.readText();
+        if (text) urlInput.value = text.trim();
+      } catch {
+        // Clipboard API denied — user can paste manually
+        urlInput.focus();
+        document.execCommand('paste');
+      }
+    });
+
+    btnDownload.addEventListener('click', downloadSticker);
+    urlInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') downloadSticker();
+    });
+
+    async function downloadSticker() {
+      const url = urlInput.value.trim();
+      if (!url) {
+        setStatus('error', 'Please enter a sticker URL first.');
+        return;
+      }
+
+      // Reset previous result
+      revokeObjectUrl();
+      previewWrap.classList.remove('visible');
+      setStatus('loading', '<span class="spinner"></span>Downloading…');
+      btnDownload.disabled = true;
+
+      try {
+        const res = await fetch('/download?url=' + encodeURIComponent(url));
+
+        if (!res.ok) {
+          let msg = 'Something went wrong.';
+          try {
+            const body = await res.json();
+            msg = body.error || msg;
+          } catch {}
+          setStatus('error', msg);
+          return;
+        }
+
+        const blob = await res.blob();
+        currentObjectUrl = URL.createObjectURL(blob);
+
+        previewImg.src = currentObjectUrl;
+        btnSave.href   = currentObjectUrl;
+        previewWrap.classList.add('visible');
+        setStatus('success', 'Done! Save the image to your phone.');
+      } catch (err) {
+        setStatus('error', 'Network error — is the server running?');
+      } finally {
+        btnDownload.disabled = false;
+      }
+    }
+
+    function setStatus(type, html) {
+      statusEl.className = 'status ' + type;
+      statusEl.innerHTML = html;
+    }
+
+    function revokeObjectUrl() {
+      if (currentObjectUrl) {
+        URL.revokeObjectURL(currentObjectUrl);
+        currentObjectUrl = null;
+      }
+    }
+  </script>
+</body>
+</html>
